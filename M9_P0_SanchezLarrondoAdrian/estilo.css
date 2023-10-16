@@ -1,20 +1,31 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Quito el margen por defecto de toda la pagina */
+    padding: 0; /* Quito el relleno por defecto de toda la pagina */
+    box-sizing: border-box; /* Cambio el tamaño para que incluya el contenido, el relleno y el borde */
 }
 
 body{
-    font-size: 20px;
-    color: #7f888f;
+    font-size: 20px; /* Declaro un tamaño de fuente */
+    color: #7f888f; /* Declaro un color al body */
 }
 
 .container{
-    display: flex;
+    display: flex; /* Coloco los elementos en linea */
 }
 
 .izq{
-    width: 25%;
+    width: 25%; /* Establece el ancho de la parte izquierda */
+    background-color: #f5f6f7; /* Establece el color de fondo */
+}
+
+.izq h3{
+    color: #3d4449;
+    font-family: "Roboto Slab", serif; /* Establece la fuente del título */
+    font-weight: 700; /* Establece el grosor de la fuente */
+    line-height: 1.5; /* Establece el interlineado */
+    font-size: 1.2em; 
+    border-bottom: 3px solid #f56a6a; /* Agrega un borde inferior */
+    padding: 40px 0 10px;
 }
 
 .der{
@@ -22,8 +33,8 @@ body{
 }
 
 ul li{
-    list-style: none;
-    cursor: pointer;
+    list-style: none; /* Elimina los marcadores de lista */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
     color: #3d4449;
 }
 
@@ -33,7 +44,11 @@ ul li:hover{
 
 .contenido{
     width: 1300px;
-    margin: 110px auto;
+    margin: 110px auto 50px;
+}
+
+.lateral{
+    padding: 30px; 
 }
 
 /* ESTILO BUSCADOR */
@@ -44,45 +59,33 @@ ul li:hover{
 }
 
 .buscador i{
-    margin-left: -40px;
+    margin-left: -45px; /* Ajusta la posición del ícono a la izquierda */
     color: #d2d7d9bf;
 }
 
 .search{
     border: 1px solid #d2d7d9bf;
-    border-radius: 7px;
+    border-radius: 7px; /* Agrega bordes redondeados al campo */
     padding: 12px;
-    width: 90%;
+    width: 98%;
     font-size: 18px;
 }
 
 /* ESTILO MENU */
 
 .menu h3{
-    color: #3d4449;
-    font-family: "Roboto Slab", serif;
-    font-weight: 700;
-    line-height: 1.5;
-    font-size: 1.38889em;
-    border-bottom: 3px solid #f56a6a;
-    width: 65px;
-    padding: 40px 0 10px;
-}
-
-.menu{
-    background-color: #f5f6f7;
-    padding: 30px;
+    width: 80px;
 }
 
 .menu ul{
-    padding: 15px 0;
+    padding: 45px 0;
     border-bottom: 2px solid #d2d7d9bf;
 }
 
 .menu ul li{
     font-size: 0.7em;
-    letter-spacing: 0.075em;
-    border-top: solid 1px #d2d7d9bf;
+    letter-spacing: 0.075em; /* Ajusta el espaciado entre letras */
+    border-top: solid 1px #d2d7d9bf; 
     padding: 15px 0;
 }
 
@@ -97,7 +100,7 @@ ul li:hover{
 }
 
 .lista{
-    display: none;
+    display: none; /* Oculta todos los elementos */
 }
 
 .lista li{
@@ -114,7 +117,7 @@ ul li:hover{
 }
 
 .submenu:hover ul{
-    display: block;
+    display: block; /* Muestra elementos "ul" anidados cuando se hace hover en elementos con la clase "otroSubmenu" */ 
     border-bottom: 0px;
 }
 
@@ -123,12 +126,78 @@ ul li:hover{
     border-bottom: 0px;
 }
 
+/* ESTILO IMAGENES BARRA LATERAL */
+
+.ante{
+    padding-top: 20px;
+}
+
+.ante h3{
+    width: 180px;
+}
+
+.verticalFoto{
+    padding: 20px 0;
+    border-bottom: 2px solid #d2d7d9bf;
+}
+
+.linea{
+    border-bottom: 2px solid #d2d7d9bf;
+}
+
+.omp{
+    padding: 20px 0;
+}
+
+.omp img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ESTILO CONTACTO */
+
+.get{
+    padding: 20px 0;
+    border-bottom: 2px solid #d2d7d9bf;
+}
+
+.get h3{
+    width: 180px;
+}
+
+.get p{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.letraGet{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.contactoIcono{
+    display: flex;
+    padding: 20px 0;
+}
+
+.contactoIcono i{
+    font-size: 24px;
+    color: #f56a6a;
+    margin-right: 20px;
+}
+
+.color:hover{
+    color: #f56a6a;
+    cursor: pointer;
+}
+
 /* ESTILO HEADER */
 
 .header{
     color: #3d4449;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuye el espacio entre elementos flexibles */
     padding-bottom: 20px;
     border-bottom: 5px solid #f56a6a;
     font-family: 'Roboto Slab', serif;
@@ -196,40 +265,57 @@ h1{
 
 /* ESTILO ARTICULOS FONT AWESOME */
 
+.articulos{
+    margin: 70px 0;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #d2d7d9bf;
+}
+
 h2{
     font-family: 'Roboto Slab', serif;
     color: #3d4449;
     border-bottom: 3px solid #f56a6a;
+    width: 20%;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
 }
 
-.articulos{
-    margin: 20px;
+.artic{
+    margin: 80px auto;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
 }
 
-.articulos article{
+.artic article{
+    width: 100%;
     display: flex;
-    align-items: center;
+}
+
+article{
+    margin-right: 50px;
 }
 
 .icon{
     border: 1px solid #a0a4a7;
     border-radius: 2px;
-    /* rotate: 45deg; */
-    width: 120px;
-    height: 110px;
-    margin-right: 40px;
+    transform: rotate(45deg); /* Aplica una rotación de 45 grados */
+    width: 150px;
+    height: 120px;
+    margin-right: 50px;
 }
 
 .icon i{
     color: #f56a6a;
-    font-size: 40px;
-    /* rotate: -45deg; */
+    font-size: 55px;
+    transform: rotate(-45deg);
     padding: 30px;
 }
 
-.content h3{
+.signal i{
+    font-size: 45px;
+}
+
+h3{
     color: #3d4449;
     font-family: "Roboto Slab", serif;
     font-weight: 700;
@@ -238,8 +324,55 @@ h2{
 }
 
 .content p{
+    margin-top: 20px;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* ESTILO */
+/* ESTILO IMAGENES */
+
+.cartas{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan automáticamente cuando no caben en una fila */
+}
+
+.carta{
+    padding: 50px;
+    width: 33%;
+}
+
+.carta-img img{
+    width: 320px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.letra{
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.more{
+    width: 100px;
+    padding: 12px;
+    padding-left: 25px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.br-b-d{
+    border-bottom: 1px solid #d2d7d9bf;
+    border-right: 1px solid #d2d7d9bf;
+}
+
+.br-b-i{
+    border-bottom: 1px solid #d2d7d9bf;
+    border-left: 1px solid #d2d7d9bf;
+}
+
+.br-d-a-i{
+    border-top: 1px solid #d2d7d9bf;
+    border-right: 1px solid #d2d7d9bf;
+    border-left: 1px solid #d2d7d9bf;
+}
